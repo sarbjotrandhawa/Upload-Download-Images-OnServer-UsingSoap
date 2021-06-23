@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://services.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.com/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="InterruptedException" type="tns:InterruptedException"/>
+
+<xs:element name="fileSizeAndFile" type="tns:fileSizeAndFile"/>
+
+<xs:element name="fileSizeAndFileResponse" type="tns:fileSizeAndFileResponse"/>
+
+<xs:element name="waitFor10Sec" type="tns:waitFor10Sec"/>
+
+<xs:element name="waitFor10SecResponse" type="tns:waitFor10SecResponse"/>
+
+<xs:complexType name="waitFor10Sec">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="waitFor10SecResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="InterruptedException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fileSizeAndFile">
+<xs:sequence>
+<xs:element name="fileName" type="xs:string" minOccurs="0"/>
+<xs:element name="data" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fileSizeAndFileResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fileUploadResponseDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fileUploadResponseDTO">
+<xs:sequence>
+<xs:element name="file" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="fileName" type="xs:string" minOccurs="0"/>
+<xs:element name="filelength" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
