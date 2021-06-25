@@ -2,6 +2,7 @@
 This demo helps to update the image from the local PC to the Derby database using Soap Web services and downloading the same image from the server by giving the name of the file and shows into a JSP page. Extensively used Java, HTML, JSP, JSTL, Servlet, Hibernate, JPA, Maven and Derby as the database user. 
 
 ----------------------- Soap Web Service ------------------------
+
 1).Create a Maven Web Service with 2 Web Methods .
 
 2).GetFileSize() - (If required make changes for method parameters)
